@@ -1,5 +1,5 @@
 {
-  "name": "sqs-core",
+  "name": "@squarespace/core",
   "version": "0.1.5",
   "description": "The frontend JS API for Squarespace templates.",
   "license": "Apache-2.0",
@@ -15,7 +15,6 @@
     "prepublish": "npm run build",
     "watch": "babel src --watch --out-dir dist"
   },
-  "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.10.1",
     "babel-eslint": "^6.1.0",
