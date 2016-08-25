@@ -6,7 +6,7 @@
   "author": "Squarespace, Inc.",
   "repository": {
     "type": "git",
-    "url": "ssh://git@stash.nyc.squarespace.net:7999/tmd/sqs-core.git"
+    "url": "ssh://git@stash.nyc.squarespace.net:7999/tmd/core.git"
   },
   "main": "./dist/index.js",
   "scripts": {
