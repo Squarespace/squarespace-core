@@ -10,10 +10,12 @@
   },
   "main": "./index.js",
   "scripts": {
-    "clean": "rimraf index.js Tweak.js Lifecycle.js ImageLoader.js squarespace-core**",
+    "build": "babel src --out-dir . && webpack",
+    "clean": "rimraf index.js Tweak.js Lifecycle.js ImageLoader.js",
     "lint": "eslint src",
-    "build": "npm run lint && babel src --out-dir . && webpack",
-    "watch": "babel src --watch --out-dir dist"
+    "prepublish": "npm run lint && npm run build",
+    "postpublish": "npm run clean",
+    "watch": "babel src --out-dir . --watch"
   },
   "devDependencies": {
     "@sqs/eslint-config-squarespace": "^2.1.0",
