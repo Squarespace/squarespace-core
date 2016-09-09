@@ -7,14 +7,14 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename:
-      pkg.name +
-      '-' +
-      pkg.version +
+      'squarespace-core' +
+      // '-' +
+      // pkg.version +
       (minified ? '.min' : '') +
       '.js',
     library: 'SQS',
     libraryTarget: 'umd',
-    path: __dirname + '/build/' + pkg.version
+    path: __dirname
   },
   devtool: 'source-map',
   module: {

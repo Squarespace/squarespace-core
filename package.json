@@ -1,5 +1,5 @@
 {
-  "name": "@squarespace/core",
+  "name": "@sqs/core",
   "version": "0.1.6",
   "description": "The frontend JS API for Squarespace templates.",
   "license": "Apache-2.0",
@@ -8,21 +8,22 @@
     "type": "git",
     "url": "ssh://git@stash.nyc.squarespace.net:7999/tmd/core.git"
   },
-  "main": "./dist/index.js",
+  "main": "./index.js",
   "scripts": {
+    "clean": "rimraf index.js Tweak.js Lifecycle.js ImageLoader.js squarespace-core**",
     "lint": "eslint src",
-    "build": "npm run lint && babel src --out-dir dist && webpack",
-    "prepublish": "npm run build",
+    "build": "npm run lint && babel src --out-dir . && webpack",
     "watch": "babel src --watch --out-dir dist"
   },
   "devDependencies": {
+    "@sqs/eslint-config-squarespace": "^2.1.0",
     "babel-cli": "^6.10.1",
     "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.4",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-es2015": "^6.9.0",
     "eslint": "^2.0.0",
-    "@sqs/eslint-config-squarespace": "^2.1.0",
+    "rimraf": "^2.5.4",
     "webpack": "^1.12.2"
   }
 }

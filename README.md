@@ -11,6 +11,9 @@ npm install @squarespace/core;
 
 ````js
 const core = require('@squarespace/core');
+
+// Or require one of the submodules
+const Tweak = require('@squarespace/core/Tweak');
 ````
 
 ## Reference

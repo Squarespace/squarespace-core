@@ -1,3 +1,6 @@
+
+const isAuthenticated = Static.SQUARESPACE_CONTEXT.authenticatedAccount;
+
 /**
  * @const {Object} tweaksToWatch
  */
@@ -16,7 +19,7 @@ const tweaksToWatch = {
  *
  * Tweaks are typically used by the developers through LESS variables, mixins,
  * and class names added to the <body> element.
- * 
+ *
  * Sometimes, a developer may find it necessary to access the value of a tweak
  * through Javascript, or to watch for changes in that tweak and update the DOM
  * accordingly. The Tweak module of squarespace-core is meant to provide an
@@ -56,6 +59,11 @@ const Tweak = {
    * @param {Function}        Callback to call when watcher is triggered
    */
   watch: function () {
+
+    if (!isAuthenticated) {
+      return;
+    }
+
     if (arguments.length === 0) {
       console.error('squarespace-core: ' +
         'Tweak.watch must be called with at least one parameter');
@@ -95,7 +103,7 @@ const Tweak = {
   }
 };
 
-if (window.Y.Global) {
+if (window.Y.Global && isAuthenticated) {
   // If Y.Global is present on the page, set up the tweak event listener.
   window.Y.Global.on('tweak:change', (e) => {
     const tweakName = e.getName();

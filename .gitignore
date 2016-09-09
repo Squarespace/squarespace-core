@@ -4,3 +4,8 @@ logs
 npm-debug.log*
 node_modules
 dist
+./index.js
+Tweak
+Lifecycle
+ImageLoader
+squarespace-core**
