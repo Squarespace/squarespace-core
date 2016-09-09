@@ -85,6 +85,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 	
 	exports.default = SQS;
+	module.exports = exports['default'];
 
 /***/ },
 /* 1 */
@@ -133,6 +134,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @exports {Object} ImageLoader
 	 */
 	exports.default = ImageLoader;
+	module.exports = exports["default"];
 
 /***/ },
 /* 2 */
@@ -190,6 +192,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @exports {Object} Lifecycle
 	 */
 	exports.default = Lifecycle;
+	module.exports = exports["default"];
 
 /***/ },
 /* 3 */
@@ -342,6 +345,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @exports {Object} Tweak
 	 */
 	exports.default = Tweak;
+	module.exports = exports['default'];
 
 /***/ }
 /******/ ])
