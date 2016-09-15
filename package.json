@@ -10,8 +10,8 @@
   },
   "main": "./index.js",
   "scripts": {
-    "build": "babel src --out-dir . && webpack",
-    "clean": "rimraf index.js Tweak.js Lifecycle.js ImageLoader.js",
+    "build": "babel src --out-dir . && webpack -p",
+    "clean": "rimraf index.js Tweak.js Lifecycle.js ImageLoader.js squarespace-core**",
     "lint": "eslint src",
     "prepublish": "npm run lint && npm run build",
     "postpublish": "npm run clean",

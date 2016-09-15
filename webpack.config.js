@@ -8,8 +8,8 @@ module.exports = {
   output: {
     filename:
       'squarespace-core' +
-      // '-' +
-      // pkg.version +
+      '-' +
+      pkg.version +
       (minified ? '.min' : '') +
       '.js',
     library: 'SQS',
