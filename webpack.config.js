@@ -7,14 +7,14 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename:
-      pkg.name +
+      'squarespace-core' +
       '-' +
       pkg.version +
       (minified ? '.min' : '') +
       '.js',
     library: 'SQS',
     libraryTarget: 'umd',
-    path: __dirname + '/build/' + pkg.version
+    path: __dirname
   },
   devtool: 'source-map',
   module: {
@@ -24,7 +24,8 @@ module.exports = {
         exclude: /(node_modules)/,
         loader: 'babel',
         query: {
-          presets: ['es2015']
+          presets: [ 'es2015' ],
+          plugins: [ 'add-module-exports' ]
         }
       }
     ]

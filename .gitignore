@@ -4,3 +4,7 @@ logs
 npm-debug.log*
 node_modules
 dist
+/index.js
+/Tweak.js
+/Lifecycle.js
+/ImageLoader.js
