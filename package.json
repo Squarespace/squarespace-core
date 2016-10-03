@@ -1,12 +1,12 @@
 {
-  "name": "@sqs/core",
-  "version": "0.2.0",
+  "name": "@squarespace/core",
+  "version": "1.0.0",
   "description": "The frontend JS API for Squarespace templates.",
   "license": "Apache-2.0",
   "author": "Squarespace, Inc.",
   "repository": {
     "type": "git",
-    "url": "ssh://git@stash.nyc.squarespace.net:7999/tmd/core.git"
+    "url": "ssh://git@github.com:Squarespace/squarespace-core.git"
   },
   "main": "./index.js",
   "scripts": {
@@ -18,7 +18,6 @@
     "watch": "babel src --out-dir . --watch"
   },
   "devDependencies": {
-    "@sqs/eslint-config-squarespace": "^2.1.0",
     "babel-cli": "^6.10.1",
     "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.4",
