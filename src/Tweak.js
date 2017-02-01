@@ -58,7 +58,8 @@ const Tweak = {
       return null;
     }
 
-    return Y.Squarespace.Template.getTweakValue(name);
+    return (window.Static.SQUARESPACE_CONTEXT.tweakJSON[name] ||
+      window.Static.SQUARESPACE_CONTEXT.tweakJSON[name.replace('@', '').replace('.', '')]);
   },
 
   /**
