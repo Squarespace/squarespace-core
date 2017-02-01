@@ -120,7 +120,7 @@ const Tweak = {
   }
 };
 
-if (window.Y.Global && isAuthenticated) {
+if (isAuthenticated && window.Y && window.Y.Global) {
   // If Y.Global is present on the page, set up the tweak event listener.
   window.Y.Global.on('tweak:change', (e) => {
     const tweakName = e.getName();
