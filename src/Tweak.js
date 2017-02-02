@@ -58,7 +58,8 @@ const Tweak = {
       return null;
     }
 
-    return Y.Squarespace.Template.getTweakValue(name);
+    return (window.Static.SQUARESPACE_CONTEXT.tweakJSON[name] ||
+      window.Static.SQUARESPACE_CONTEXT.tweakJSON[name.replace('@', '').replace('.', '')]);
   },
 
   /**
@@ -119,7 +120,7 @@ const Tweak = {
   }
 };
 
-if (window.Y.Global && isAuthenticated) {
+if (isAuthenticated && window.Y && window.Y.Global) {
   // If Y.Global is present on the page, set up the tweak event listener.
   window.Y.Global.on('tweak:change', (e) => {
     const tweakName = e.getName();
