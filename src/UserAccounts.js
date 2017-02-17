@@ -15,20 +15,4 @@
  * limitations under the License.
  */
 
-import ImageLoader from './ImageLoader';
-import Lifecycle from './Lifecycle';
-import Tweak from './Tweak';
-import UserAccounts from './UserAccounts';
-
-/**
- * The public JavaScript API for Squarespace template developers.
- * @namespace SQS
- */
-const SQS = {
-  ImageLoader,
-  Lifecycle,
-  Tweak,
-  UserAccounts
-};
-
-export default SQS;
+export default window.UserAccountApi;
