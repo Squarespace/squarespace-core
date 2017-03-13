@@ -15,4 +15,13 @@
  * limitations under the License.
  */
 
-export default window.UserAccountApi;
+const warningMessage = 'UserAccounts API not available';
+const ua = window.userAccounts;
+const warn = () => {
+  console.warn(warningMessage);
+};
+
+const isUserAuthenticated = ua ? ua.isUserAuthenticated : warn;
+const openAccountScreen = ua ? ua.openAccountScreen : warn;
+
+export default { isUserAuthenticated, openAccountScreen };
