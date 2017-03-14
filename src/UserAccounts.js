@@ -16,7 +16,7 @@
  */
 
 const warningMessage = 'UserAccounts API not available';
-const ua = window.userAccounts;
+const ua = window.UserAccountApi;
 const warn = () => {
   console.warn(warningMessage);
 };
