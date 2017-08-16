@@ -15,20 +15,13 @@
  * limitations under the License.
  */
 
-import ImageLoader from './ImageLoader';
-import Lifecycle from './Lifecycle';
-import Tweak from './Tweak';
-import UserAccounts from './UserAccounts';
-
-/**
- * The public JavaScript API for Squarespace template developers.
- * @namespace SQS
- */
-const SQS = {
-  ImageLoader,
-  Lifecycle,
-  Tweak,
-  UserAccounts
+const warningMessage = 'UserAccounts API not available';
+const ua = window.UserAccountApi;
+const warn = () => {
+  console.warn(warningMessage);
 };
 
-export default SQS;
+const isUserAuthenticated = ua ? ua.isUserAuthenticated : warn;
+const openAccountScreen = ua ? ua.openAccountScreen : warn;
+
+export default { isUserAuthenticated, openAccountScreen };

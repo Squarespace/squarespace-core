@@ -77,6 +77,21 @@ Listen for changes on a tweak item. If one parameter is provided, the callback w
 **Return**
 - `String`- The value of the tweak
 
+### User Accounts
+
+Surfaces methods for interacting with Squarespace's built-in user accounts functionality, including the ability to tell whether a user is logged in, and the ability to open a context-reliant user accounts window (either login/signup modal or account panel).
+
+#### UserAccounts.isUserAuthenticated()
+
+Checks whether the user is currently authenticated.
+
+**Return**
+- `Boolean` - Whether the user is authenticated
+
+#### UserAccounts.openAccountScreen()
+
+Opens either the login/signup modal (if the user isn't authenticated), or the account panel (if the user is authenticated).
+
 ## Contributing
 We are currently not accepting contributions to Squarespace Core.
 
