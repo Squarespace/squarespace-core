@@ -15,13 +15,19 @@
  * limitations under the License.
  */
 
+import {
+  USER_ACCOUNT_API,
+  IS_USER_AUTHENTICATED,
+  OPEN_ACCOUNT_SCREEN
+} from './UserAccountsNamespaces'
+
 const warningMessage = 'UserAccounts API not available';
-const ua = window.UserAccountApi;
+const ua = window[USER_ACCOUNT_API];
 const warn = () => {
   console.warn(warningMessage);
 };
 
-const isUserAuthenticated = ua ? ua.isUserAuthenticated : warn;
-const openAccountScreen = ua ? ua.openAccountScreen : warn;
+const isUserAuthenticated = ua ? ua[IS_USER_AUTHENTICATED] : warn;
+const openAccountScreen = ua ? ua[OPEN_ACCOUNT_SCREEN] : warn;
 
 export default { isUserAuthenticated, openAccountScreen };
