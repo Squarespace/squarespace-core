@@ -120,7 +120,7 @@ const Tweak = {
   }
 };
 
-if (isAuthenticated && window.Y && window.Y.Global) {
+function addTweakChangeListener() {
   // If Y.Global is present on the page, set up the tweak event listener.
   window.Y.Global.on('tweak:change', (e) => {
     const tweakName = e.getName();
@@ -149,6 +149,14 @@ if (isAuthenticated && window.Y && window.Y.Global) {
       });
     }
   });
+}
+
+if (isAuthenticated) {
+  if (document.readyState !== 'complete') {
+    window.addEventListener('load', addTweakChangeListener);
+  } else if (window.Y && window.Y.Global) {
+    addTweakChangeListener();
+  }
 }
 
 /**
