@@ -19,7 +19,7 @@ import {
   USER_ACCOUNT_API,
   IS_USER_AUTHENTICATED,
   OPEN_ACCOUNT_SCREEN
-} from './UserAccountsNamespaces'
+} from './UserAccountsNamespaces';
 
 const warningMessage = 'UserAccounts API not available';
 const ua = window[USER_ACCOUNT_API];

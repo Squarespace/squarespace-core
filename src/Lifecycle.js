@@ -53,7 +53,7 @@ const Lifecycle = {
    * @method  destroy
    */
   destroy() {
-    window.Squarespace.globalDestroy(Y);
+    window.Squarespace.globalDestroy(window.Y);
   }
 
 };

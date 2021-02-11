@@ -16,13 +16,13 @@
  */
 
 /**
- * ​Squarespace comes with a number of built-in facilities for managing images
+ * Squarespace comes with a number of built-in facilities for managing images
  * that are uploaded to our system. After uploading an image into a collection,
- * Squarespace automatically creates multiple copies of the image with different 
+ * Squarespace automatically creates multiple copies of the image with different
  * sizes. Our ImageLoader will then help render images properly when they are
  * presented on a page, even on retina displays.
  *
- * ImageLoader can also be used to fit or fill an image inside ​a parent
+ * ImageLoader can also be used to fit or fill an image inside a parent
  * container, where it automatically determines which image size to use
  * depending on the current dimensions of the container.
  *

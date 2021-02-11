@@ -1,12 +1,3 @@
 {
-  "ecmaFeatures": {
-    "blockBindings": true,
-    "modules": true
-  },
-  "env": {
-    "es6": true
-  },
-  "parserOptions": {
-      "sourceType": "module",
-  }
+  "extends": "eslint-config-squarespace"
 }
