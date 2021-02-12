@@ -1,3 +1,6 @@
 {
-  "extends": "eslint-config-squarespace"
+  "extends": "eslint-config-squarespace",
+  "parserOptions": {
+    "sourceType": "module"
+  }
 }
