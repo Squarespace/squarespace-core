@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-const isAuthenticated = Static.SQUARESPACE_CONTEXT.authenticatedAccount;
+const isAuthenticated = window.Static.SQUARESPACE_CONTEXT.authenticatedAccount;
 
 /**
  * @const {Object} tweaksToWatch
