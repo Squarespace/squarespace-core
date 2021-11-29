@@ -1,6 +1,7 @@
 {
   "extends": "eslint-config-squarespace",
   "parserOptions": {
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaVersion": 2020
   }
 }
