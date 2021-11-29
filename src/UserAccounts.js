@@ -22,12 +22,15 @@ import {
 } from './UserAccountsNamespaces';
 
 const warningMessage = 'UserAccounts API not available';
-const ua = window[USER_ACCOUNT_API];
 const warn = () => {
   console.warn(warningMessage);
 };
 
-const isUserAuthenticated = ua ? ua[IS_USER_AUTHENTICATED] : warn;
-const openAccountScreen = ua ? ua[OPEN_ACCOUNT_SCREEN] : warn;
+const isUserAuthenticated = () => {
+  return window?.[USER_ACCOUNT_API]?.[IS_USER_AUTHENTICATED]() ?? warn();
+};
+const openAccountScreen = () => {
+  return window?.[USER_ACCOUNT_API]?.[OPEN_ACCOUNT_SCREEN]() ?? warn();
+};
 
 export default { isUserAuthenticated, openAccountScreen };
