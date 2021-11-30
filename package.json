@@ -1,6 +1,6 @@
 {
   "name": "@squarespace/core",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "The frontend JS API for Squarespace templates.",
   "license": "Apache-2.0",
   "author": "Squarespace, Inc.",
@@ -10,9 +10,10 @@
   },
   "main": "./index.js",
   "scripts": {
-    "build": "babel src --out-dir .",
+    "build": "babel src --out-dir . --ignore '**/*.test.js'",
     "clean": "rimraf index.js Tweak.js Lifecycle.js ImageLoader.js UserAccounts.js UserAccountsNamespaces.js squarespace-core**",
     "lint": "eslint src",
+    "test": "jest",
     "prepublish": "npm run lint && npm run build",
     "postpublish": "npm run clean",
     "watch": "babel src --out-dir . --watch"
@@ -22,8 +23,9 @@
     "@babel/core": "^7.12.13",
     "@babel/preset-env": "^7.12.13",
     "babel-plugin-add-module-exports": "^1.0.4",
-    "eslint": "^7.19.0",
+    "eslint": "^8.3.0",
     "eslint-config-squarespace": "^2.0.0",
+    "jest": "^27.4.2",
     "rimraf": "^3.0.2"
   }
 }

@@ -4,8 +4,10 @@ logs
 npm-debug.log*
 node_modules
 dist
+coverage
 /index.js
 /Tweak.js
 /Lifecycle.js
 /ImageLoader.js
 /UserAccounts.js
+/UserAccountsNamespaces.js
